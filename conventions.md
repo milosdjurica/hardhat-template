@@ -23,8 +23,9 @@
 
 # TODO
 
-- Add same for tests
+- Put a number before script 00-Deploy.ts -> This is because of knowing which script runs first
 
+- Add conventions for tests
   - Unit, integration, etc...
   - Test tree !!!
   -
