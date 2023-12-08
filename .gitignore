@@ -10,8 +10,11 @@ dist
 node_modules
 types
 deployments
-a
+typechain
+typechain-types
 
+# Folder where i put notes
+a
 
 # files
 *.env
