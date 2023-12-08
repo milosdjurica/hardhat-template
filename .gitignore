@@ -24,3 +24,5 @@ a
 coverage.json
 package-lock.json
 yarn.lock
+yarn*
+gas-report.txt

@@ -6,8 +6,8 @@ import "hardhat-deploy";
 
 const SEPOLIA_RPC_URL = process.env.SEPOLIA_PROCESS_ENV || "";
 const PRIVATE_KEY = process.env.PRIVATE_KEY || "0xKEY";
-const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
-const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY;
+const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY || "api-key";
+const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY || "api-key";
 
 const config: HardhatUserConfig = {
   solidity: "0.8.20",
@@ -16,6 +16,12 @@ const config: HardhatUserConfig = {
     hardhat: {
       chainId: 31337,
       // blockConfirmations: 3
+    },
+    // for working with yarn hardhat node !
+    localhost: {
+      chainId: 31337,
+      url: "http://127.0.0.1:8545",
+      // automatically gets 10 default accounts
     },
     sepolia: {
       chainId: 11155111,
