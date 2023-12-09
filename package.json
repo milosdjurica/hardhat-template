@@ -1,4 +1,12 @@
 {
+  "name": "hardhat-template",
+  "description": "Hardhat-based template for blockchain development with Solidity and TypeScript",
+  "license": "MIT",
+  "version": "1.0.0",
+  "author": {
+    "name": "Milos Djurica",
+    "url": "https://github.com/milosdjurica"
+  },
   "devDependencies": {
     "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
     "@nomicfoundation/hardhat-ethers": "^3.0.0",
