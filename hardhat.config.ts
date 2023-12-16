@@ -8,6 +8,8 @@ import "hardhat-deploy-ethers";
 const SEPOLIA_RPC_URL = process.env.SEPOLIA_PROCESS_ENV || "";
 const PRIVATE_KEY = process.env.PRIVATE_KEY || "0xKEY";
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY || "api-key";
+const POLYGONSCAN_API_KEY =
+	process.env.POLYGONSCAN_API_KEY || "polygon-api-key";
 const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY || "api-key";
 
 const config: HardhatUserConfig = {
@@ -43,7 +45,11 @@ const config: HardhatUserConfig = {
 		},
 	},
 	etherscan: {
-		apiKey: ETHERSCAN_API_KEY,
+		apiKey: {
+			// mainnet: ETHERSCAN_API_KEY,
+			sepolia: ETHERSCAN_API_KEY,
+			// polygon: POLYGONSCAN_API_KEY,
+		},
 	},
 	gasReporter: {
 		// put it enabled: true -> only when you want to check gas optimizations
