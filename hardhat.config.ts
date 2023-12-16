@@ -24,11 +24,14 @@ const config: HardhatUserConfig = {
 			url: "http://127.0.0.1:8545",
 			// automatically gets 10 default accounts
 		},
+		ganache: {
+			chainId: 1337,
+			url: "http://127.0.0.1:8545",
+		},
 		sepolia: {
 			chainId: 11155111,
 			url: SEPOLIA_RPC_URL,
 			accounts: [PRIVATE_KEY],
-			// blockConfirmations: 1,
 		},
 	},
 	namedAccounts: {
@@ -48,6 +51,7 @@ const config: HardhatUserConfig = {
 		noColors: true,
 		outputFile: "gas-report.txt",
 		currency: "USD",
+		excludeContracts: [],
 		coinmarketcap: COINMARKETCAP_API_KEY,
 		// token: "MATIC", // polygon network
 	},
