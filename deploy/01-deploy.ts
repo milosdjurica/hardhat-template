@@ -15,4 +15,4 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
 };
 export default func;
 func.id = "deploy_example"; // id required to prevent re-execution
-func.tags = ["Example"];
+func.tags = ["example", "all"];
